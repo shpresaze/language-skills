@@ -1,4 +1,14 @@
 // Override default variables before the import
-$body-bg: #000;
+// $body-bg: #e3ffb5;
 
 @import "~bootstrap/scss/bootstrap";
+
+.custom-bg {
+  background: url("./assets/images/bg-img.png") repeat;
+}
+.custom-green {
+  background-color: #e3ffb5;
+}
+.custom-green-dark {
+  background-color: #aedd94;
+}

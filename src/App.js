@@ -1,9 +1,7 @@
+import Home from "./components/pages/Home";
+
 function App() {
-  return (
-    <div className="text-danger">
-      TEST
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
