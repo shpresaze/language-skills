@@ -30,8 +30,8 @@ const Commision = () => {
         <h1 className="text-center">Commissions</h1>
       </Col>
       <Row>
-        {data.map((item) => (
-          <Col lg={3} md={6} xs={12} className="text-center">
+        {data.map((item, i) => (
+          <Col lg={3} md={6} xs={12} className="text-center" key={i}>
             <h3>{item.amount}</h3>
             <p>{item.desc1}</p>
             <p>{item.desc2}</p>

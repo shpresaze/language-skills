@@ -4,7 +4,7 @@ import CarusalCard from "./CarusalCard";
 
 const AboutUs = () => {
   return (
-    <>
+    <div id="aboutus">
       <h1 className="text-center">About Us?</h1>
       <Carousel
         variant="dark"
@@ -32,7 +32,7 @@ const AboutUs = () => {
           />
         </Carousel.Item>
       </Carousel>
-    </>
+    </div>
   );
 };
 

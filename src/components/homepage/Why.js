@@ -25,8 +25,8 @@ const Why = () => {
         <h1 className="text-center">Why you must use LS?</h1>
       </Col>
       <Row>
-        {data.map((item) => (
-          <Col lg={4} md={6} xs={12} className="text-center">
+        {data.map((item, i) => (
+          <Col lg={4} md={6} xs={12} className="text-center" key={i}>
             <div>{item.icon}</div>
             <h3>{item.title}</h3>
             <p>{item.desc}</p>
