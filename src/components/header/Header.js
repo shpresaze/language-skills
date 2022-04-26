@@ -5,7 +5,7 @@ import classes from "./Header.module.scss";
 const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className={`${classes.navbar}`}>
-      <Container className="custom-green">
+      <Container className="custom-green border-bottom border-dark">
         <Navbar.Brand className="d-lg-none d-flex w-50">
           <Image src={logo} className="w-25" />
         </Navbar.Brand>
