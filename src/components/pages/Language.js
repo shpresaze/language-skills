@@ -17,7 +17,7 @@ import { RiDiscussFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import LangAction from "../learn/LangAction";
 
-const Language = () => {
+const Language = (props) => {
   const groups = [
     {
       title: "Discuss",
@@ -49,7 +49,7 @@ const Language = () => {
     },
   ];
   return (
-    <DefaultLayout>
+    <DefaultLayout {...props}>
       <Container className="custom-green">
         <Title title="Italiano">
           <ProgressBar

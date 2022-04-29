@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, Image, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Image, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import classes from "./Header.module.scss";
-const Header = () => {
+const Header = (props) => {
   return (
     <Navbar collapseOnSelect expand="lg" className={`${classes.navbar}`}>
       <Container className="custom-green border-bottom border-dark">
@@ -24,12 +24,27 @@ const Header = () => {
             <Image src={logo} className="w-25" />
           </Navbar.Brand>
           <Nav>
-            <Link to="/learn" className="nav-link">
-              Learn
-            </Link>
-            <Link to="/signin" className="nav-link">
-              Sign in
-            </Link>
+            {props.logged && (
+              <Link to="/learn" className="nav-link">
+                Learn
+              </Link>
+            )}
+            {props.logged ? (
+              <Link
+                to={"#"}
+                className="nav-link"
+                onClick={() => {
+                  props.changeLogged(false);
+                  localStorage.setItem("logged", false);
+                }}
+              >
+                Log out
+              </Link>
+            ) : (
+              <Link to="/login" className="nav-link">
+                Sign in
+              </Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -5,9 +5,9 @@ import Title from "../learn/Title";
 import Story1 from "../../assets/images/story1.png";
 import Story2 from "../../assets/images/story2.png";
 
-const Story = () => {
+const Story = (props) => {
   return (
-    <DefaultLayout>
+    <DefaultLayout {...props}>
       <Container className="custom-green">
         <Title title="Par's morning"></Title>
 

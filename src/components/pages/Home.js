@@ -6,9 +6,9 @@ import Commision from "../homepage/Commision";
 import CreateAcc from "../homepage/CreateAcc";
 import FirstSection from "../homepage/FirstSection";
 import Why from "../homepage/Why";
-const Home = () => {
+const Home = (props) => {
   return (
-    <DefaultLayout>
+    <DefaultLayout {...props}>
       <Container className="custom-green">
         <FirstSection />
         <Why />

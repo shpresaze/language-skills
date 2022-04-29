@@ -16,7 +16,7 @@ import Italian from "../../assets/images/it.png";
 import Albanian from "../../assets/images/sq.png";
 import { Link } from "react-router-dom";
 
-const Learn = () => {
+const Learn = (props) => {
   const langs = [
     {
       lang: "Italian",
@@ -40,7 +40,7 @@ const Learn = () => {
     },
   ];
   return (
-    <DefaultLayout>
+    <DefaultLayout {...props}>
       <Container className="custom-green">
         <Title title="Choose a language" />
         <Row>
