@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Image, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import classes from "./Header.module.scss";
 const Header = () => {
@@ -15,15 +16,20 @@ const Header = () => {
           className="justify-content-center"
         >
           <Nav>
-            <Nav.Link>Home</Nav.Link>
-            <Nav.Link>About Us</Nav.Link>
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
           </Nav>
           <Navbar.Brand className="d-lg-flex d-none justify-content-center w-25">
             <Image src={logo} className="w-25" />
           </Navbar.Brand>
           <Nav>
-            <Nav.Link>Learn</Nav.Link>
-            <Nav.Link>Sign in</Nav.Link>
+            <Link to="/learn" className="nav-link">
+              Learn
+            </Link>
+            <Link to="/signin" className="nav-link">
+              Sign in
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
