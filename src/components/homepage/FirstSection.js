@@ -1,7 +1,8 @@
 import React from "react";
 import { Button, Col, Image, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import readingParrot from "../../assets/images/reading-parrot.png";
-const FirstSection = () => {
+const FirstSection = (props) => {
   return (
     <Row className="custom-bg">
       <Col lg={5} xs={12} className="d-flex flex-column justify-content-center">
@@ -13,9 +14,19 @@ const FirstSection = () => {
           <p>Create an account for free</p>
           <p>and start your jurney!</p>
         </div>
-        <Button variant="dark" className="rounded-pill w-50 mx-auto">
-          CREATE ACCOUNT
-        </Button>
+        {props.logged ? (
+          <Link to="/learn" className="nav-link">
+            <Button variant="dark" className="rounded-pill w-50 mx-auto">
+              LEARN
+            </Button>
+          </Link>
+        ) : (
+          <Link to="/register" className="nav-link">
+            <Button variant="dark" className="rounded-pill w-50 mx-auto">
+              CREATE ACCOUNT
+            </Button>
+          </Link>
+        )}
       </Col>
       <Col lg={7} xs={12}>
         <Image src={readingParrot} className="img-fluid" />

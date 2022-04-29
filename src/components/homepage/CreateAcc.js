@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const CreateAcc = () => {
   return (
@@ -11,9 +12,11 @@ const CreateAcc = () => {
           commission on all sales – and bring in up to $5000 a month – just from
           referrals!
         </p>
-        <Button variant="dark" className="rounded-pill w-50 mx-auto">
-          CREATE ACCOUNT
-        </Button>
+        <Link to="/register" className="nav-link">
+          <Button variant="dark" className="rounded-pill w-50 mx-auto">
+            CREATE ACCOUNT
+          </Button>
+        </Link>
       </Col>
     </Row>
   );

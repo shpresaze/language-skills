@@ -19,16 +19,16 @@ const Quiz = (props) => {
           }}
         >
           <label htmlFor="first">
-            la papagalle dormio
-            <input type="radio" id="first" name="quest" value="1" required />
+            la pappagallo dorme alle 7
+            <input type="radio" id="first" name="quest" value="1" />
           </label>
           <label htmlFor="first">
-            la papagalle dormio
+            Il pappagallo si alza alle 7
             <input type="radio" id="first" name="quest" value="2" required />
           </label>
           <label htmlFor="first">
-            la papagalle dormio
-            <input type="radio" id="first" name="quest" value="3" required />
+            la tartaruga si alza alle 7
+            <input type="radio" id="first" name="quest" value="3" />
           </label>
           <Button type="submit" className="w-25 me-auto">
             Submit

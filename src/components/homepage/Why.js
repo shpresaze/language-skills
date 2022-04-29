@@ -1,21 +1,23 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import { FaAssistiveListeningSystems } from "react-icons/fa";
+import { AiFillRead, AiFillQuestionCircle } from "react-icons/ai";
 
 const Why = () => {
   const data = [
     {
-      icon: "ico",
-      title: "Title",
+      icon: <AiFillRead size="4rem" />,
+      title: "Read",
       desc: "desc",
     },
     {
-      icon: "ico",
-      title: "Title",
+      icon: <FaAssistiveListeningSystems size="4rem" />,
+      title: "Listen Pronuntiation",
       desc: "desc",
     },
     {
-      icon: "ico",
-      title: "Title",
+      icon: <AiFillQuestionCircle size="4rem" />,
+      title: "Do Quizes",
       desc: "desc",
     },
   ];

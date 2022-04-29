@@ -10,11 +10,11 @@ const Home = (props) => {
   return (
     <DefaultLayout {...props}>
       <Container className="custom-green">
-        <FirstSection />
+        <FirstSection logged={props.logged} />
         <Why />
         <Commision />
         <AboutUs />
-        <CreateAcc />
+        {!props.logged && <CreateAcc />}
       </Container>
     </DefaultLayout>
   );
