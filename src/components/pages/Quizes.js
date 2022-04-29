@@ -3,6 +3,7 @@ import ItemList from "../learn/ItemList";
 import DefaultLayout from "../../DefaultLayout";
 import { Container } from "react-bootstrap";
 import Checkbox from "../learn/Checkbox";
+import { Link } from "react-router-dom";
 const Quizes = (props) => {
   const quizes = [
     {
@@ -39,6 +40,11 @@ const Quizes = (props) => {
         <ItemList title="Quizes" data={quizes} link={"/quiz"}>
           checkbox
         </ItemList>
+        <div className=" w-25 mx-auto pb-2">
+          <Link to="/certificate" className="btn btn-dark text-center">
+            Get Certificate
+          </Link>
+        </div>
       </Container>
     </DefaultLayout>
   );

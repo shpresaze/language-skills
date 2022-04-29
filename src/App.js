@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import Certificate from "./components/pages/Certificate";
 import Disucssion from "./components/pages/Disucssion";
 import Home from "./components/pages/Home";
 import Language from "./components/pages/Language";
 import Learn from "./components/pages/Learn";
 import Login from "./components/pages/Login";
 import Pronunciation from "./components/pages/Pronunciation";
+import Quiz from "./components/pages/Quiz";
 import Quizes from "./components/pages/Quizes";
 import Register from "./components/pages/Register";
 import Stories from "./components/pages/Stories";
@@ -31,6 +33,14 @@ function App() {
         <Route
           path="/learn"
           element={<Learn logged={logged} changeLogged={changeLogged} />}
+        />
+        <Route
+          path="/quiz"
+          element={<Quiz logged={logged} changeLogged={changeLogged} />}
+        />
+        <Route
+          path="/certificate"
+          element={<Certificate logged={logged} changeLogged={changeLogged} />}
         />
         <Route
           path="/login"
